@@ -34,4 +34,20 @@ def register(bot):
         # صورة تحويل
         elif m.content_type == 'photo':
 
+    bot.forward_message(
+        ADMIN_ID,
+        m.chat.id,
+        m.message_id
+    )
+
+    bot.send_message(
+        ADMIN_ID,
+        f"📩 طلب جديد من {m.from_user.id}\nالباقة: {user['plan']}"
+    )
+
+    bot.send_message(
+        m.chat.id,
+        "⏳ تم إرسال طلبك للمراجعة"
+    ) 
+
 
