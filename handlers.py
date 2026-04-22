@@ -24,7 +24,7 @@ def register(bot):
 
             set_plan(m.from_user.id, m.text)
 
-            bot.send_message(
+            bot.send_message()
                 m.chat.id,
                 f"✅ تم اختيار {m.text}\n💳 أرسل صورة التحويل للادمن"
             )
